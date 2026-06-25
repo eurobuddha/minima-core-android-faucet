@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Faucet palette (mirrors the web MiniDapp dark theme) -->
+    <color name="faucet_bg">#FF0A0A0F</color>
+    <color name="faucet_card">#FF15151F</color>
+    <color name="faucet_accent">#FFF7931A</color>
+    <color name="faucet_text">#FFFFFFFF</color>
+    <color name="faucet_subtext">#FF9A9AA8</color>
+    <color name="faucet_input">#FF1F1F2B</color>
+    <color name="faucet_success">#FF2ECC71</color>
+    <color name="faucet_error">#FFE74C3C</color>
+    <color name="faucet_banner">#33F7931A</color>
+</resources>

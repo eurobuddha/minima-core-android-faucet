@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import org.json.JSONObject;
 import org.minimarex.minimaapi.MinimaAPI;
@@ -62,6 +65,17 @@ public class MainActivity extends AppCompatActivity {
         mOpenNodeBtn   = findViewById(R.id.openNodeBtn);
         mStatus        = findViewById(R.id.statusBox);
         mPairingBanner = findViewById(R.id.pairingBanner);
+
+        // Edge-to-edge (targetSdk 35 draws under the system bars): pad the root for the status bar,
+        // nav bar and keyboard so content never sits under them.
+        final View mainRoot = findViewById(R.id.main);
+        ViewCompat.setOnApplyWindowInsetsListener(mainRoot, (v, insets) -> {
+            Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            Insets ime = insets.getInsets(WindowInsetsCompat.Type.ime());
+            v.setPadding(bars.left, bars.top, bars.right, Math.max(bars.bottom, ime.bottom));
+            return insets;
+        });
+        ViewCompat.requestApplyInsets(mainRoot);
 
         // Construct the API - this auto-registers us with the node (broadcast).
         // The register reply tells us whether we are enabled yet.

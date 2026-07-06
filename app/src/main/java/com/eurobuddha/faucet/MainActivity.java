@@ -1,4 +1,4 @@
-package org.minimarex.faucet;
+package com.eurobuddha.faucet;
 
 import android.content.Intent;
 import android.os.Bundle;

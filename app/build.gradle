@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'org.minimarex.faucet'
+    namespace 'com.eurobuddha.faucet'
     compileSdk 36
 
     defaultConfig {
-        applicationId "org.minimarex.faucet"
+        applicationId "com.eurobuddha.faucet"
         minSdk 28
         targetSdk 35
         versionCode 102

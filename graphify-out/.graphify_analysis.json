@@ -1,0 +1,102 @@
+{
+  "communities": {
+    "0": [
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity_isnodeinstalled",
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity_oncreate",
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity_openminimacore",
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity_readall",
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity_requestminima",
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity_showpairingbanner",
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity_showstatus",
+      "bundle"
+    ],
+    "1": [
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity",
+      "button",
+      "handler",
+      "minimaapi",
+      "textview",
+      "view"
+    ],
+    "2": [
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity",
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity_hidepairingbanner",
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity_resetgetaddrbutton",
+      "appcompatactivity",
+      "edittext"
+    ],
+    "3": [
+      "gradlew",
+      "gradlew__entry",
+      "gradlew_die",
+      "gradlew_save",
+      "gradlew_warn"
+    ],
+    "4": [
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity_getmyaddress",
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity_runnodecommand",
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_noderesult",
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_noderesult_ontimeout"
+    ],
+    "5": [
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity_isnotenabled",
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_noderesult_onresponse",
+      "jsonobject"
+    ],
+    "6": [
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity_ondestroy",
+      "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity_onresume",
+      "override"
+    ],
+    "7": [
+      "app_build"
+    ],
+    "8": [
+      "build"
+    ],
+    "9": [
+      "settings"
+    ]
+  },
+  "cohesion": {
+    "0": 0.2857142857142857,
+    "1": 0.3333333333333333,
+    "2": 0.4,
+    "3": 0.6,
+    "4": 0.8333333333333334,
+    "5": 0.6666666666666666,
+    "6": 0.6666666666666666,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0
+  },
+  "gods": [
+    {
+      "id": "app_src_main_java_com_eurobuddha_faucet_mainactivity_mainactivity",
+      "label": "MainActivity",
+      "degree": 23
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_faucet_mainactivity_noderesult",
+      "label": "NodeResult",
+      "degree": 5
+    }
+  ],
+  "surprises": [
+    {
+      "source": "MainActivity",
+      "target": "Button",
+      "source_files": [
+        "app/src/main/java/com/eurobuddha/faucet/MainActivity.java",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "note": "Bridges community 2 \u2192 community 1"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

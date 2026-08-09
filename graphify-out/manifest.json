@@ -1,0 +1,27 @@
+{
+  "app/build.gradle": {
+    "mtime": 1783341854.8931444,
+    "ast_hash": "41be848f28c24622449324e1ef3c30b3",
+    "semantic_hash": "41be848f28c24622449324e1ef3c30b3"
+  },
+  "app/src/main/java/com/eurobuddha/faucet/MainActivity.java": {
+    "mtime": 1783341854.2187138,
+    "ast_hash": "a9544af73e8dcf0485c26209249c3b14",
+    "semantic_hash": "a9544af73e8dcf0485c26209249c3b14"
+  },
+  "build.gradle": {
+    "mtime": 1782212552.0,
+    "ast_hash": "583193a3771192898c84ddef2d926224",
+    "semantic_hash": "583193a3771192898c84ddef2d926224"
+  },
+  "gradlew": {
+    "mtime": 1782212552.0,
+    "ast_hash": "02c16663c6f0aa37f98d94d698c22b8c",
+    "semantic_hash": "02c16663c6f0aa37f98d94d698c22b8c"
+  },
+  "settings.gradle": {
+    "mtime": 1782227087.2870355,
+    "ast_hash": "583a24cfb8fb19243b9cf1192038ab93",
+    "semantic_hash": "583a24cfb8fb19243b9cf1192038ab93"
+  }
+}

@@ -17,8 +17,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import org.json.JSONObject;
-import org.minimarex.minimaapi.MinimaAPI;
-import org.minimarex.minimaapi.MinimaAPIListener;
+import com.eurobuddha.minimaapi.MinimaAPI;
+import com.eurobuddha.minimaapi.MinimaAPIListener;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -31,13 +31,13 @@ import java.net.URLEncoder;
  * Native Android port of the Faucet MiniDapp.
  *
  * Talks to the local Minima Core node over the native broadcast-Intent IPC API
- * (org.minimarex.minimaapi) for the single node command it needs - "getaddress".
+ * (com.eurobuddha.minimaapi) for the single node command it needs - "getaddress".
  * The actual coin request is a direct HTTPS GET to the faucet backend.
  */
 public class MainActivity extends AppCompatActivity {
 
     private static final String FAUCET_API = "https://eurobuddha.com/faucet/api/request";
-    private static final String NODE_PKG   = "org.minimarex.minimacore";
+    private static final String NODE_PKG   = "com.eurobuddha.minimacore";
     private static final long   NODE_TIMEOUT_MS = 6000;
 
     private MinimaAPI mApi;
@@ -273,6 +273,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void openMinimaCore() {
         Intent launch = getPackageManager().getLaunchIntentForPackage(NODE_PKG);
+        if (launch == null) launch = getPackageManager().getLaunchIntentForPackage("com.eurobuddha.minimablock");
+        if (launch == null) launch = getPackageManager().getLaunchIntentForPackage("com.eurobuddha.pandamonium");
         if (launch != null) {
             startActivity(launch);
         } else {
@@ -281,7 +283,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean isNodeInstalled() {
-        return getPackageManager().getLaunchIntentForPackage(NODE_PKG) != null;
+        return getPackageManager().getLaunchIntentForPackage(NODE_PKG) != null
+                || getPackageManager().getLaunchIntentForPackage("com.eurobuddha.minimablock") != null
+                || getPackageManager().getLaunchIntentForPackage("com.eurobuddha.pandamonium") != null;
     }
 
     // ----- Status box ----------------------------------------------------------------------

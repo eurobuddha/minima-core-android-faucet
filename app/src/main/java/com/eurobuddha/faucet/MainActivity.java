@@ -37,7 +37,6 @@ import java.net.URLEncoder;
 public class MainActivity extends AppCompatActivity {
 
     private static final String FAUCET_API = "https://eurobuddha.com/faucet/api/request";
-    private static final String NODE_PKG   = "com.eurobuddha.minimacore";
     private static final long   NODE_TIMEOUT_MS = 6000;
 
     private MinimaAPI mApi;
@@ -272,9 +271,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openMinimaCore() {
-        Intent launch = getPackageManager().getLaunchIntentForPackage(NODE_PKG);
-        if (launch == null) launch = getPackageManager().getLaunchIntentForPackage("com.eurobuddha.minimablock");
-        if (launch == null) launch = getPackageManager().getLaunchIntentForPackage("com.eurobuddha.pandamonium");
+        Intent launch = MinimaAPI.launchNode(this);
         if (launch != null) {
             startActivity(launch);
         } else {
@@ -283,9 +280,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean isNodeInstalled() {
-        return getPackageManager().getLaunchIntentForPackage(NODE_PKG) != null
-                || getPackageManager().getLaunchIntentForPackage("com.eurobuddha.minimablock") != null
-                || getPackageManager().getLaunchIntentForPackage("com.eurobuddha.pandamonium") != null;
+        return MinimaAPI.launchNode(this) != null;
     }
 
     // ----- Status box ----------------------------------------------------------------------
